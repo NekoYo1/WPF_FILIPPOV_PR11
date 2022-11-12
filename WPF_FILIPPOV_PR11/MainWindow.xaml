@@ -7,53 +7,92 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <Style x:Key="style1">
-            <Setter Property="Shape.Fill">
-                <Setter.Value>
-                    <LinearGradientBrush>
-                        <GradientStop Offset="0" Color="Aqua"/>
-                        <GradientStop Offset="0.5" Color="WhiteSmoke"/>
-                        <GradientStop Offset="1.5" Color="DarkGreen"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Shape.Stroke" Value="Blue"/>
-            <Setter Property="Shape.StrokeThickness" Value="5"/>
-        </Style>
-
-        <Style x:Key="style2">
-            <Setter Property="Shape.Fill" Value="Blue"/>
-            <Setter Property="Shape.Stroke" Value="ForestGreen"/>
-            <Setter Property="Shape.StrokeThickness" Value="3"/>
-        </Style>
-
-        <Style x:Key="style3">
-            <Setter Property="Shape.Fill" Value="LawnGreen"/>
-            <Setter Property="Shape.Stroke" Value="ForestGreen"/>
-            <Setter Property="Shape.StrokeThickness" Value="3"/>
-        </Style>
+        <SolidColorBrush x:Key="Red" Color="LightBlue"/>
+        <SolidColorBrush x:Key="Black" Color="Black"/>
+        <FontFamily x:Key="Times">Arial</FontFamily>
+        <FontWeight x:Key="Bold"/>
     </Window.Resources>
-
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <TextBox Name="Figurecount"
-                     ToolTip="Inter figure count"
-                     Margin="5"
-                     Text="10"/>
-            <Button Grid.Column="1" Click="Button_Click">Generate Shapes</Button>
-        </Grid>
-
-        <Canvas Name="MainCanvas" Grid.Row="1" Margin="5"/>
+        <ListBox Margin="8,54,0,0" Name="listBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Height="200">
+            <ListBoxItem  
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                FontSize="12">
+                <CheckBox Name="CoffieCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image x:Name="cofe" Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Coffie"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+            <ListBoxItem 
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                FontSize="12">
+                <CheckBox Name="TeaCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Tea"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+            <ListBoxItem 
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                FontSize="12">
+                <CheckBox Name="OrangeJuiceCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Orange Juice"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+            <ListBoxItem FontSize="12" 
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                         >
+                <CheckBox Name="MilkCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Milk"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+            <ListBoxItem 
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                FontSize="12">
+                <CheckBox Name="IcedTeaCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Iced Tea"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+            <ListBoxItem FontSize="12"
+                Background="{StaticResource Red}"
+                Foreground="{StaticResource Black}"
+                FontFamily="{StaticResource Times}"
+                FontWeight="{StaticResource Bold}"
+                         >
+                <CheckBox Name="MangoShakeCheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="P:\Общая\402\_ИСРПО\Готовые работы\Филиппов\1.PNG" Height="30"></Image>
+                        <TextBlock Text="Mango Shake"></TextBlock>
+                    </StackPanel>
+                </CheckBox>
+            </ListBoxItem>
+        </ListBox>
+        <Button Margin="289,285,311,115" Content="Next" Click="Button_Click"></Button>
     </Grid>
-
 </Window>
-
